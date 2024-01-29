@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Task.Types.AppTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-01-11T01:46:47" hostname="marcio-arcolinux" time="0.008">
+  <properties/>
+  <testcase name="testAppHasAGreeting" classname="Task.Types.AppTest" time="0.008"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

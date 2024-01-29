@@ -1,0 +1,48 @@
+task turnOnTheCar {
+    doLast {
+        println "turnOnTheCar"
+    }
+}
+
+task accelerateTheCar {
+    //esta task "accelerateTheCar" depende de executar a task "turnOnTheCar" primeiro.
+    dependsOn "turnOnTheCar"
+    
+    //essa task "accelerateTheCar" será finalizada executando a task "speedUp".
+    finalizedBy "speedUp"
+    
+    doLast {
+        println "accelerateTheCar"
+    }
+}
+
+task taskAfterDefaultTask {
+    //esta task "taskAfterDefaultTask" depende de executar a task "projects" primeiro.
+    dependsOn "projects"
+    
+    doLast {
+        println "taskAfterDefaultTask"
+    }
+}
+
+task speedUp {
+    doLast {
+        println "speedUp"
+    }
+}
+
+task turnOnTheRadio {
+    //caso as tasks "turnOnTheRadio" e "turnOnTheCar" sejam executados juntos,
+    //a task "turnOnTheRadio" [deve executar após] a task "turnOnTheCar".
+    mustRunAfter "turnOnTheCar"
+
+    doLast {
+        println "turnOnTheRadio"
+    }
+}
+
+task driveCrazy {
+    //esta task "driveCrazy" depende de executar as task abaixo primeiro.
+    dependsOn = ["turnOnTheRadio", "accelerateTheCar"]
+}
+

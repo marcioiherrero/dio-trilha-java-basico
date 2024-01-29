@@ -1,0 +1,40 @@
+plugins {
+    // Apply the application plugin to add support for building a CLI application in Java.
+    id 'application'
+}
+
+application {
+    // Define the main class for the application.
+    mainClass = 'Project.App'
+}
+
+def variable = 10
+
+println "testando saida de texto pelo gradle"
+
+println "valor da variavel 'variable' = $variable"
+
+variable = "novo valor como String"
+println "novo valor da variavel 'variable' = $variable"
+
+function (variable)
+def function (x) {
+    println "imprimindo valor da funcao 'function' = $x"
+}
+
+def myClosure = {
+    println "funcao closure"
+}
+
+def a = myClosure
+a()
+
+class MyClass {
+    String name = "barnabe"
+    def func() {
+        println "valor do atributo name = $name da classe MyClass"
+    }
+}
+
+MyClass myClass = new MyClass()
+myClass.func()

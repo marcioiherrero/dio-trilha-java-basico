@@ -1,0 +1,37 @@
+plugins {
+    id 'application'
+}
+
+repositories {    
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13'
+}
+
+application {
+    mainClass = 'Task.Types.App'
+}
+
+task deleteBuild (type: Delete) {
+    mustRunAfter = ["copyBuild", "zipReleaseToTestTeam"]
+    delete 'build'
+}
+
+task copyBuild (type: Copy) {
+    from 'build'
+    into '../release'
+}
+
+task zipReleaseToTestTeam (type: Zip) {
+    archiveBaseName = 'executableToTestTeam'
+    destinationDirectory = file('../executableToTestTeam')
+    from 'build/distributions'
+}
+
+task generateRelease {
+    dependsOn = ["build", "test"]
+    finalizedBy = ["copyBuild", "zipReleaseToTestTeam", "deleteBuild"]
+}
+
