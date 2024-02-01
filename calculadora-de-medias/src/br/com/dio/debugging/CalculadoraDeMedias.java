@@ -21,7 +21,7 @@ public class CalculadoraDeMedias {
         double soma = 0;
         
         for (String aluno : alunos) {
-            System.out.println("Nota do aluno %s: " + aluno);
+            System.out.printf("Nota do aluno %s: ", aluno);
             double nota = scanner.nextDouble();
             soma += nota;
         }
