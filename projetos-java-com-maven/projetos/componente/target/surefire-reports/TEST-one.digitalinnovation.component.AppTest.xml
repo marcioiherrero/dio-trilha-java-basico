@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="one.digitalinnovation.component.AppTest" time="0.003" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="one.digitalinnovation.component.AppTest" time="0.002" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="21.0.2+13"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-21-openjdk/lib"/>
-    <property name="maven.multiModuleProjectDirectory" value="/home/marcio/Downloads/cursos/dio/formacao-java-developer/estudos/dio-trilha-java-basico/projetos-java-com-maven/projetos/componente"/>
+    <property name="maven.multiModuleProjectDirectory" value="/home/marcio/Downloads/courses/dio/formacao-java-developer/estudos/dio-trilha-java-basico/projetos-java-com-maven/projetos/componente"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="https://openjdk.org/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -13,7 +13,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/home/marcio/Downloads/cursos/dio/formacao-java-developer/estudos/dio-trilha-java-basico/projetos-java-com-maven/projetos/componente"/>
+    <property name="user.dir" value="/home/marcio/Downloads/courses/dio/formacao-java-developer/estudos/dio-trilha-java-basico/projetos-java-com-maven/projetos/componente"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="java.runtime.version" value="21.0.2+13"/>
     <property name="os.arch" value="amd64"/>
@@ -32,7 +32,7 @@
     <property name="java.class.version" value="65.0"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="6.6.14-1-lts"/>
+    <property name="os.version" value="6.6.14-2-lts"/>
     <property name="library.jansi.path" value="/opt/maven/lib/jansi-native"/>
     <property name="user.home" value="/home/marcio"/>
     <property name="user.timezone" value="America/Sao_Paulo"/>
@@ -57,5 +57,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.endian" value="little"/>
   </properties>
-  <testcase classname="one.digitalinnovation.component.AppTest" name="testApp" time="0.003"/>
+  <testcase classname="one.digitalinnovation.component.AppTest" name="testApp" time="0.002"/>
 </testsuite>
