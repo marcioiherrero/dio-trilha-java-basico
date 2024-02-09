@@ -14,9 +14,9 @@ public class CalculadoraDeMedias {
         
         System.out.printf("Media da turma %.2f", media);
         
-    }
-    
-    static double calculaMediaDaTurma(String[] alunos, Scanner scanner) {
+   }
+   
+   static double calculaMediaDaTurma(String[] alunos, Scanner scanner) {
         
         double soma = 0;
         
