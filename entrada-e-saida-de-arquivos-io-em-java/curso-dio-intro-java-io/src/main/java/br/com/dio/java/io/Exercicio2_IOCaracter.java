@@ -20,7 +20,7 @@ public class Exercicio2_IOCaracter {
         String line = scanner.nextLine();
         
         File f = new File("recomendacoes.txt");
-
+        
         BufferedWriter bw = new BufferedWriter(new FileWriter(f.getName()));
         
         do {
@@ -32,8 +32,7 @@ public class Exercicio2_IOCaracter {
         bw.flush();
         
         pw.printf("Arquivo \"%s\" foi criado com sucesso!", f.getName());
-
-
+        
         bw.close();
         scanner.close();
         pw.close();
