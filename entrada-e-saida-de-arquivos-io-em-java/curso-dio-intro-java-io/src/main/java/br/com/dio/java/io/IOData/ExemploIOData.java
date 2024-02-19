@@ -1,4 +1,4 @@
-package br.com.dio.java.io;
+package br.com.dio.java.io.IOData;
 
 import javax.xml.crypto.Data;
 import java.io.*;

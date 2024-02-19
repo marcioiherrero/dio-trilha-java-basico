@@ -1,8 +1,8 @@
-package br.com.dio.java.io;
+package br.com.dio.java.io.IOCharacter;
 
 import java.io.*;
 
-public class Exercicio3_IOCaracter {
+public class Exercicio3_IOCharacter {
     
     public static void copiarArquivo() throws IOException {
         

@@ -1,4 +1,4 @@
-package br.com.dio.java.io;
+package br.com.dio.java.io.IOBytes;
 
 import java.io.*;
 
@@ -23,7 +23,7 @@ public class ExemploIOBytes {
         BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(nomeArquivoCopia));
         
         byte[] buffer = new byte[1024];
-        int line = 0;
+        int line;
         while ((line = bis.read(buffer)) != -1) {
             bos.write(buffer, 0, line);
             bos.flush();

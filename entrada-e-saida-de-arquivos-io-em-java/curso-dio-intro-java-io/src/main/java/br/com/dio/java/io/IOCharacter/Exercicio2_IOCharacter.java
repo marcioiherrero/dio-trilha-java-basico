@@ -1,10 +1,10 @@
-package br.com.dio.java.io;
+package br.com.dio.java.io.IOCharacter;
 
 import java.io.*;
 import java.util.Scanner;
 
 //Abra o teclado para escrever 3 filmes que você recomendaria e armazene em "recomendados.txt"
-public class Exercicio2_IOCaracter {
+public class Exercicio2_IOCharacter {
     
     public static void main(String[] args) throws IOException {
         lerTecladoEscreverDocumento();
