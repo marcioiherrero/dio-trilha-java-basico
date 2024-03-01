@@ -16,18 +16,25 @@ public class ExemploIOBytes {
         String nomeArquivoCopia = nomeArquivo.substring(0, nomeArquivo.indexOf("-")).concat("-copy-IOBytes.txt");
         File fCopia = new File(nomeArquivoCopia);
         
-        
         //OutputStream os = new FileOutputStream(nomeArquivoCopia);
         //BufferedOutputStream bos = new BufferedOutputStream(os);
         //Decorator
         BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(nomeArquivoCopia));
         
+        //processo de leitura a cada 1024 bytes:
         byte[] buffer = new byte[1024];
         int line;
         while ((line = bis.read(buffer)) != -1) {
             bos.write(buffer, 0, line);
             bos.flush();
         }
+        
+        // processo de leitura byte a byte:
+        //int line;
+        //while ((line = bis.read()) != -1) {
+        //    bos.write(line);
+        //    bos.flush();
+        //}
         
         bis.close();
         bos.close();

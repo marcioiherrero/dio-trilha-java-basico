@@ -4,8 +4,11 @@ import java.io.*;
 
 public class Exercicio3_IOCharacter {
     
+    public static void main(String[] args) throws IOException {
+        copiarArquivo();
+    }
+    
     public static void copiarArquivo() throws IOException {
-        
         File f = new File("recomendacoes.txt");
         String nomeDoArquivo = f.getName();
         
@@ -21,10 +24,11 @@ public class Exercicio3_IOCharacter {
         do {
             bw.write(line);
             bw.newLine();
-            //flush() faz o Buffer gravar os bytes no arquivo...
-            //é bom ir gravando em arquivo parcialmente com o flsuh() para não perder dados, caso fique algum dado para trás..
-            //quando é arquivo pequeno, o flush() pode ser chamado no final do processo mas com arquivos grandes é interessante
-            //fazer o flush() parcialemnte.
+            // flush() faz o Buffer "descarregar" os bytes no arquivo...
+            // é bom ir "descarregando" os bytes em arquivo parcialmente com o flsuh()
+            // para não perder dados, caso fique algum dado para trás..
+            // quando o arquivo é pequeno, o flush() pode ser chamado no final do processo mas
+            // com arquivos grandes é interessante fazer o flush() parcialemnte.
             bw.flush();
             line = br.readLine();
         } while (line != null);
@@ -44,11 +48,9 @@ public class Exercicio3_IOCharacter {
         br.close();
         bw.close();
         pw.close();
-        
     }
     
     public static void adicionarInfoNoArquivo(String arquivo) throws IOException {
-        
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String line = br.readLine();
         
@@ -63,13 +65,5 @@ public class Exercicio3_IOCharacter {
         bw.flush();
         bw.close();
         br.close();
-        
     }
-    
-    public static void main(String[] args) throws IOException {
-        
-        copiarArquivo();
-        
-    }
-    
 }

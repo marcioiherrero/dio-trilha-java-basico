@@ -1,6 +1,5 @@
 package br.com.dio.java.io.IOData;
 
-import javax.xml.crypto.Data;
 import java.io.*;
 import java.util.Scanner;
 

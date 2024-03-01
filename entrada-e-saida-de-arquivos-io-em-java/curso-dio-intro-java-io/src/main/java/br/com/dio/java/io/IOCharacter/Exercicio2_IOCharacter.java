@@ -26,10 +26,9 @@ public class Exercicio2_IOCharacter {
         do {
             bw.write(line);
             bw.newLine();
+            bw.flush();
             line = scanner.nextLine();
         } while (!line.equalsIgnoreCase("fim"));
-        
-        bw.flush();
         
         pw.printf("Arquivo \"%s\" foi criado com sucesso!", f.getName());
         

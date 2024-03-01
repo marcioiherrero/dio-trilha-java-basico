@@ -9,12 +9,10 @@ public class ExemploIOObject {
     
     public static void serializacao() throws IOException {
         Gato gato = new Gato("Gatinho feio", 2, "Azul");
+        gato.setSexo("Masculino");
         
         File file = new File("gato.obj");
         
-        //OutputStream os = new FileOutputStream(file.getName());
-        //ObjectOutputStream oos = new ObjectOutputStream(os);
-        //Decorator
         ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file.getName()));
         
         oos.writeObject(gato);
@@ -23,16 +21,25 @@ public class ExemploIOObject {
         ps.printf("Arquivo %s gerado com sucesso com %d bytes.\n", file.getName(), file.length());
         
         oos.close();
-        ps.close();
+        //ps.close();
     }
     
-    private static void desserializacao() {
+    public static void desserializacao(String arquivo) throws IOException, ClassNotFoundException {
+        ObjectInputStream ois = new ObjectInputStream(new FileInputStream(arquivo));
+        Gato objGato = (Gato) ois.readObject();
         
+        System.out.printf("Nome......: %s\n", objGato.getNome());
+        System.out.printf("Idade.....: %d\n", objGato.getIdade());
+        System.out.printf("Cor.......: %s\n", objGato.getCor());
+        System.out.printf("Sexo......: %s\n", objGato.getSexo());
+        System.out.println(objGato);
+        
+        ois.close();
     }
     
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, ClassNotFoundException {
         serializacao();
-        desserializacao();
+        desserializacao("gato.obj");
     }
     
 }

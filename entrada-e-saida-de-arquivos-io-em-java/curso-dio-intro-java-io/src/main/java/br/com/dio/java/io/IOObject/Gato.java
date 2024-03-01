@@ -5,9 +5,13 @@ import java.util.Objects;
 
 public class Gato implements Serializable {
     
+    //serialVersionUID: define versão do objeto na serialização.
+    private static final long serialVersionUID = 2L;
     private String nome;
     private Integer idade;
     private String cor;
+    //transient: ignora o atributo na serialização do objeto.
+    private transient String sexo;
     
     public Gato(String nome, Integer idade, String cor) {
         this.nome = nome;
@@ -37,6 +41,14 @@ public class Gato implements Serializable {
     
     public void setCor(String cor) {
         this.cor = cor;
+    }
+    
+    public String getSexo() {
+        return sexo;
+    }
+    
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
     }
     
     @Override
