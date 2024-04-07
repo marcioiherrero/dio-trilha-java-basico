@@ -1,6 +1,6 @@
 package one.digitalinnovation.junit;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 
 import java.time.LocalDateTime;
